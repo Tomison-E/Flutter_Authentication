@@ -7,15 +7,7 @@ A simple flutter application that demonstrates authentication with pin or OTP se
 This project presents a simple UI layout to assist with the demonstration. Structured code to allow users understand the logic.
 
 ### Android
-The permissions for android are compulsory and should be placed inside AndroidManifest.xml as shown below(excluding the brackets):
-
-[ 
-  <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
-    <uses-permission android:name="android.permission.READ_SMS"/>
-    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
-    ]
-    
+The permissions for android are compulsory and should be placed inside AndroidManifest.xml as displayed in this project.
 'FlutterFragmentActivity' is compulsory and should be factored inside MainActivty class as displayed in this project.
 
 ### IOS
@@ -24,7 +16,7 @@ Include the following (excluding the brackets)
               <string>Why is my app authenticating using face id?</string>
 ]
 
-inside ios/Runner/info.plist file
+inside ios/Runner/info.plist file as demonstrated in this project.
 
 ## Dependencies
 - [pin_view](https://pub.dev/packages/pin_view)
