@@ -26,6 +26,9 @@ inside ios/Runner/info.plist file as demonstrated in this project.
 ## Design Inspiration
 - [Dribble UI Template](https://dribbble.com/shots/5401676)
 
+## Complete Application View
+![view](assets/screenshots/IMG_6712.gif)
+
 ## Flutter UI Implementation
 ![A](assets/screenshots/a.PNG)
 ![B](assets/screenshots/b.PNG)
