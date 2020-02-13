@@ -15,7 +15,7 @@ class _MyAppState extends State<Auth> {
   static final _scaffoldKeys = GlobalKey<ScaffoldState>();
   final double min = 400.0;
   String phoneNumber = "+2348166569640";
-  final String sendingPhoneNumber = "0903 114 8014";
+  final String sendingPhoneNumber = "09031148094";
   Timer _timer;
   int _begin = 40;
 
@@ -35,9 +35,9 @@ class _MyAppState extends State<Auth> {
     const aSec = Duration(seconds: 1);
     _timer = Timer.periodic(
         aSec,
-        (Timer timer) => setState(() {
-              _begin < 1 ? timer.cancel() : _begin = _begin - 1;
-            }));
+            (Timer timer) => setState(() {
+          _begin < 1 ? timer.cancel() : _begin = _begin - 1;
+        }));
   }
 
   void showInSnackBar(String value) {
@@ -89,7 +89,7 @@ class _MyAppState extends State<Auth> {
                                   children: [
                                     TextSpan(
                                         text:
-                                            "Enter 4 digit number that was sent to $phoneNumber",
+                                        "Enter 4 digit number that was sent to $phoneNumber",
                                         style: TextStyle(
                                             fontWeight: FontWeight.w300)),
                                   ]),
@@ -109,18 +109,18 @@ class _MyAppState extends State<Auth> {
                                         dashPositions: [],
                                         sms: Platform.isAndroid
                                             ? SmsListener(
-                                                from: sendingPhoneNumber,
-                                                formatBody: (String body) {
-                                                  String codeRaw =
-                                                      body.split(": ")[1];
-                                                  List<String> code =
-                                                      codeRaw.split("-");
-                                                  return code.join;
-                                                })
+                                            from: sendingPhoneNumber,
+                                            formatBody: (String body) {
+                                              String codeRaw =
+                                              body.split(": ")[1];
+                                              List<String> code =
+                                              codeRaw.split("-");
+                                              return code.join;
+                                            })
                                             : null,
                                         submit: (String pin) {
                                           FocusScopeNode currentFocus =
-                                              FocusScope.of(context);
+                                          FocusScope.of(context);
                                           if (!currentFocus.hasPrimaryFocus) {
                                             currentFocus.unfocus();
                                           }
@@ -153,7 +153,7 @@ class _MyAppState extends State<Auth> {
                                                 ],
                                               ),
                                               borderRadius:
-                                                  BorderRadius.circular(30.0)),
+                                              BorderRadius.circular(30.0)),
                                           alignment: Alignment.center),
                                       onTap: () {
                                         Navigator.pushNamed(
@@ -162,7 +162,7 @@ class _MyAppState extends State<Auth> {
                                     )
                                   ],
                                   mainAxisAlignment:
-                                      MainAxisAlignment.spaceAround,
+                                  MainAxisAlignment.spaceAround,
                                 ),
                               ),
                               elevation: 1.0),
@@ -173,13 +173,13 @@ class _MyAppState extends State<Auth> {
                                   style: TextStyle(
                                       color: Colors.green, fontSize: 12.0),
                                   children: [
-                                TextSpan(
-                                    text: "0:$_begin",
-                                    style: TextStyle(
-                                        color: Colors.green,
-                                        fontSize: 12.0,
-                                        fontWeight: FontWeight.w600))
-                              ])),
+                                    TextSpan(
+                                        text: "0:$_begin",
+                                        style: TextStyle(
+                                            color: Colors.green,
+                                            fontSize: 12.0,
+                                            fontWeight: FontWeight.w600))
+                                  ])),
                           Spacer(flex: 3),
                         ],
                         crossAxisAlignment: CrossAxisAlignment.center,
